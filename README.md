@@ -31,6 +31,14 @@ Creado con:
 - NPM: v9.8.1
 - NEST CLI: v10.3.0
 
+## Variables de entorno
+Creación de archivo .env en la raíz del proyecto con las siguientes variables de entorno:
+
+```bash
+  # Configuración de la base de datos
+  JWT_SECRET=elmejorsecreto
+  DATABASE_URL=
+```
 ## Installation
 
 ```bash

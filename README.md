@@ -39,6 +39,7 @@ Creación de archivo .env en la raíz del proyecto con las siguientes variables 
   JWT_SECRET=elmejorsecreto
   DATABASE_URL=
 ```
+
 ## Installation
 
 ```bash

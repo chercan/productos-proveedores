@@ -6,9 +6,8 @@ import { Strategy, ExtractJwt } from 'passport-jwt';
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(configService: ConfigService) {
     super({
-      // Configura el extractor para obtener el JWT del encabezado(headers) "Authorization con un Bearer token"
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      ignoreExpiration: false, // no ignores la expiración del token JWT, asegurate que los tokens caducados sean rechazados
+      ignoreExpiration: false,
       secretOrKey: configService.get<string>('JWT_SECRET'),
     });
   }

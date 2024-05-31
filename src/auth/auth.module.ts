@@ -11,7 +11,7 @@ import { LocalStrategy } from './local.strategy.service';
 @Module({
   imports: [
     UsersModule,
-    PassportModule, // Nos sirve para habilitar la autenticación en la aplicación
+    PassportModule,
     JwtModule.registerAsync({
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({

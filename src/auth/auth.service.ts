@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt'; // Nos proporciona la funcionalidad de generar y verificar los tokes "JWT"
+import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { UsersService } from 'src/users/users.service';
 
@@ -10,22 +10,21 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  // Principio de Responsabilidad única (SRP), este método se encargara únicamente de validar un usuario
   async validateUser(email: string, password: string) {
     const user = await this.usersService.findByEmail(email);
 
     if (user && (await bcrypt.compare(password, user.password))) {
-      const { password, ...result } = user.toObject(); // convierte el documento de Mongoose en un Objeto de JavaScript plano, que nos permita manipular el objeto.
+      const { password, ...result } = user.toObject();
       return result;
     }
     return null;
   }
 
-  // Principio de Responsabilidad única (SRP), Este método se va encargar únicamente de generar el JWT
   async login(user: any) {
     const payload = { username: user.username, sub: user._id };
+    const aut = this.jwtService.sign(payload);
     return {
-      access_token: this.jwtService.sign(payload), // Genera un token JWT firmado con el payload
+      authorization: `Bearer ${aut}`,
     };
   }
 }

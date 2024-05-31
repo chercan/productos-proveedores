@@ -35,8 +35,8 @@ Creado con:
 Creación de archivo .env en la raíz del proyecto con las siguientes variables de entorno:
 
 ```bash
-  # Configuración de la base de datos
   JWT_SECRET=elmejorsecreto
+  JWT_PREFIX=kibernum
   DATABASE_URL=
 ```
 

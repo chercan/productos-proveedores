@@ -7,12 +7,17 @@ import { Model } from 'mongoose';
 import { ResourceAlreadyExistsException } from '../common/exceptions/resource-already-exists';
 import * as bcrypt from 'bcrypt';
 import { ResourceNotFoundException } from '../common/exceptions/resource-not-found';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class UsersService {
+  salt: number;
   constructor(
     @InjectModel(User.name) private readonly userModel: Model<User>,
-  ) {}
+    private readonly configService: ConfigService,
+  ) {
+    this.salt = JSON.parse(this.configService.get('SALTING_ROUNDS'));
+  }
 
   async create(createUserDto: CreateUserDto) {
     const existingUser = await this.userModel
@@ -33,7 +38,7 @@ export class UsersService {
     }
 
     const { password, ...userData } = createUserDto;
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, this.salt);
     const createUser = new this.userModel({
       ...userData,
       password: hashedPassword,

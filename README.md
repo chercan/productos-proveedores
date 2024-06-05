@@ -54,6 +54,9 @@ Se agrega una semilla para la creación de un usuario administrador con las cred
 
 En caso de no contar con un usuario administrador en el sistema se recomienda cambiar la variable de entorno IS_ADMIN a true para crear un usuario administrador por defecto.
 
+## POSTMAN
+En la carpeta tools se encuentra compartido el postman
+
 ## Installation
 
 ```bash

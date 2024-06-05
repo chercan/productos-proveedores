@@ -11,58 +11,6 @@
 			"name": "Users",
 			"item": [
 				{
-					"name": "Login",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"userName\": \"vgarate\",\n    \"password\": \"vgarate\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/auth/login",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"auth",
-								"login"
-							]
-						},
-						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
-					},
-					"response": []
-				},
-				{
 					"name": "Get users",
 					"event": [
 						{
@@ -78,8 +26,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"packages": {},
-								"type": "text/javascript"
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -88,7 +39,7 @@
 						"header": [
 							{
 								"key": "authorization",
-								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTcxMzA2OTAsImV4cCI6MTcxNzEzNDI5MH0.RJj5m4u4qgYXPx4ffsvCelfqfyZOa23DOU2_tnoxKYU"
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjU0NzksImV4cCI6MTcxNzU2OTA3OX0._SxhADLPQTs4uWDxXA32dHfdRB7gcb76uk9ljMm8CiI"
 							}
 						],
 						"url": {
@@ -135,11 +86,11 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTcxMzA2OTAsImV4cCI6MTcxNzEzNDI5MH0.RJj5m4u4qgYXPx4ffsvCelfqfyZOa23DOU2_tnoxKYU"
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTc1NTU5MTgsImV4cCI6MTcxNzU1OTUxOH0.krovaFc8X3Pun83zNrzmVb1laXmSszTmEUhr6K2cEl4"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/users/665941e7e779eaf1da3e43ed",
+							"raw": "http://localhost:3000/users/665941e7e779eaf2da3e43ed",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -147,7 +98,7 @@
 							"port": "3000",
 							"path": [
 								"users",
-								"665941e7e779eaf1da3e43ed"
+								"665941e7e779eaf2da3e43ed"
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -173,12 +124,12 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTcxMzA2OTAsImV4cCI6MTcxNzEzNDI5MH0.RJj5m4u4qgYXPx4ffsvCelfqfyZOa23DOU2_tnoxKYU"
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTc1NTU5MTgsImV4cCI6MTcxNzU1OTUxOH0.krovaFc8X3Pun83zNrzmVb1laXmSszTmEUhr6K2cEl4"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userName\": \"vgarate\",\n    \"email\": \"nuevo@vg.cl\",\n    \"password\": \"vgarate\"\n}",
+							"raw": "{\n    \"userName\": \"vgarate\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,11 +171,11 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTcxMzA2OTAsImV4cCI6MTcxNzEzNDI5MH0.RJj5m4u4qgYXPx4ffsvCelfqfyZOa23DOU2_tnoxKYU"
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjU5NDFlN2U3NzllYWYyZGEzZTQzZWQiLCJpYXQiOjE3MTc1NTYxMzMsImV4cCI6MTcxNzU1OTczM30.Kx5jDqmJ7yzUcpucYzH63gSt46At-O7pPWzIxnyjY0A"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/users/66595ca71f35ef4baff20818",
+							"raw": "http://localhost:3000/users/665fd3cc2e8e4d356dbe3f5f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -232,7 +183,7 @@
 							"port": "3000",
 							"path": [
 								"users",
-								"66595ca71f35ef4baff20818"
+								"665fd3cc2e8e4d356dbe3f5f"
 							]
 						},
 						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
@@ -268,12 +219,12 @@
 						"header": [
 							{
 								"key": "authorization",
-								"value": "asdf"
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjU0NzksImV4cCI6MTcxNzU2OTA3OX0._SxhADLPQTs4uWDxXA32dHfdRB7gcb76uk9ljMm8CiI"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"userName\": \"vgaradte\",\n    \"email\": \"d@vg.cl\",\n    \"password\": \"vgarate\"\n}",
+							"raw": "{\n\t\"userName\": \"vgarate\",\n    \"email\": \"vgarate@vg.cl\",\n    \"password\": \"vgarate\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -296,6 +247,299 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjY3MDEsImV4cCI6MTcxNzU3MDMwMX0.pAx-bV0rZA0uaSGu9lKBwm_0ELEbDerFDvXLsRSK01Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjY3MDEsImV4cCI6MTcxNzU3MDMwMX0.pAx-bV0rZA0uaSGu9lKBwm_0ELEbDerFDvXLsRSK01Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/665ffd104fa6bf1492c417fb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"665ffd104fa6bf1492c417fb"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjY3MDEsImV4cCI6MTcxNzU3MDMwMX0.pAx-bV0rZA0uaSGu9lKBwm_0ELEbDerFDvXLsRSK01Y"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"porotos con riendas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/665ffd104fa6bf1492c417fb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"665ffd104fa6bf1492c417fb"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjY3MDEsImV4cCI6MTcxNzU3MDMwMX0.pAx-bV0rZA0uaSGu9lKBwm_0ELEbDerFDvXLsRSK01Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/products/665fffd399c0b32a64557326",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"665fffd399c0b32a64557326"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Create products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "kibernum eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjVmZjdlZTNhYjNjNGU5MGIxMzliOTAiLCJpYXQiOjE3MTc1NjY3MDEsImV4cCI6MTcxNzU3MDMwMX0.pAx-bV0rZA0uaSGu9lKBwm_0ELEbDerFDvXLsRSK01Y"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"zapallo\",\n    \"price\": 1000,\n    \"description\": \"Porotos verdes\",\n    \"brand\": \"Campo Lindo\",\n    \"category\": \"Alimento\",\n    \"status\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"vgarate\",\n    \"password\": \"vgarate\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
 		}
 	],
 	"event": [

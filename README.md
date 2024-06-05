@@ -37,8 +37,22 @@ Creación de archivo .env en la raíz del proyecto con las siguientes variables 
 ```bash
   JWT_SECRET=elmejorsecreto
   JWT_PREFIX=kibernum
+  SALTING_ROUNDS=10
+  USER_ADMIN=admin
+  PASSWORD_ADMIN=admin
+  EMAIL_ADMIN=admin@admin.cl
+  IS_ADMIN=false
   DATABASE_URL=
 ```
+
+## Base de datos
+Se agrega una semilla para la creación de un usuario administrador con las credenciales definidas en las variables de entorno. 
+- USER_ADMIN
+- PASSWORD_ADMIN
+- EMAIL_ADMIN
+- IS_ADMIN
+
+En caso de no contar con un usuario administrador en el sistema se recomienda cambiar la variable de entorno IS_ADMIN a true para crear un usuario administrador por defecto.
 
 ## Installation
 
